@@ -1,0 +1,20 @@
+[profile.default]
+src = "src"
+out = "out"
+test = "test"
+script = "script"
+libs = ["dependencies"]
+solc = "0.8.28"
+evm_version = "paris"        # broad multi-chain compatibility (no PUSH0/cancun assumptions)
+optimizer = true
+optimizer_runs = 1_000_000   # deployed once, read on every view → optimize runtime
+
+# script/DumpCover.s.sol writes the rendered SVG here for visual inspection.
+fs_permissions = [{ access = "write", path = "./out" }]
+
+# Dependencies are fetched with soldeer (`forge soldeer install`), pinned here and by soldeer.lock.
+# abx-contracts supplies the canonical IAbxFieldRenderer / IAbxAugmentHook interfaces; forge-std is
+# test-only. Neither contract vendors a copy of an ABX interface.
+[dependencies]
+abx-contracts = "3.0.0"
+forge-std = "1.16.1"

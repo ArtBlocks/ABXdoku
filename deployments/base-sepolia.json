@@ -1,0 +1,30 @@
+{
+  "chain": "base-sepolia",
+  "chainId": 84532,
+  "purpose": "paired-testnet qualification run; DailyRotation uses a 120 s period so a rotation can be watched",
+  "abxCli": "0.2.0",
+  "abxContracts": "3.0.0",
+  "owner": "0x187BAbedCAc5a5466e47681F77C2014780fa7516",
+  "collection": {
+    "address": "0x0526fcD6f176E88F830e840D1159375B14d02384",
+    "deployBlock": 47516414,
+    "family": "ERC-721 SeriesCode",
+    "max": 16
+  },
+  "contracts": {
+    "DailySurfaces": {
+      "address": "0x24f52D6F069dC104c21Fb34b1db1Be222E836555",
+      "tx": "0x174cd02e5c3935643beac86822a6c71dfd48dfa21bbc9919a1153b8500959547"
+    },
+    "DailyRotation": {
+      "address": "0x455E6a352153F7021E0E4B78F39C1f2bd611fDa8",
+      "constructor": { "period": 120 },
+      "tx": "0xd61879de6c22d7dcad7d2a769f3368d3075a40bfd17b2ae8412ad91b7127ca4c"
+    }
+  },
+  "wiring": {
+    "augmentHook": "0x455E6a352153F7021E0E4B78F39C1f2bd611fDa8",
+    "setParamHooksTx": "0xa54f2e0e0f6dba0c9c136b56c734dffa48b5b94e1ffb52d11ee19b433b57dc7e"
+  },
+  "resolver": "https://resolver.abx.io/t/84532/0x0526fcd6f176e88f830e840d1159375b14d02384/0"
+}
