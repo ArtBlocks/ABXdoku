@@ -1,0 +1,20 @@
+{
+  "name": "abxdoku",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ABXdoku — a fully on-chain daily Sudoku built with ABX. A reference implementation of a small, complete ABX code project.",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "abx": "abx",
+    "preview": "abx preview --script program/sudoku.js",
+    "inspect": "abx inspect program/sudoku.js",
+    "audit": "node tools/audit32.js && node tools/audit-daily.js",
+    "test:contracts": "forge test --root contracts",
+    "test": "npm run audit && npm run test:contracts"
+  },
+  "devDependencies": {
+    "@artblocks/abx-cli": "0.2.0"
+  }
+}

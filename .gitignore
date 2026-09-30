@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+
+# secrets — NEVER commit. `abx auth login` writes ABX_SERVICES_API_KEY into .env.
+.env
+.env.*
+!.env.example
+
+# abx local projection, managed Arweave key, and signing state
+.abx-self-host/
+
+# agent skill copies installed by `abx skill install` (version-locked to the CLI; reinstall, don't commit)
+.claude/skills/
+.agents/skills/
+.abx-skill-backups/
+
+# foundry build byproducts — regenerated from what IS committed:
+#   contracts/dependencies/ from contracts/soldeer.lock (`forge soldeer install`, pinned by checksum)
+#   contracts/out/, cache/ from src+test by `forge build`
+contracts/out/
+contracts/cache/
+contracts/dependencies/
+contracts/broadcast/
+
+# playwright / preview output
+frames/
+preview-out/
+
+**/.DS_Store
