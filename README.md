@@ -85,14 +85,3 @@ false positive — the program has no dependencies.
 See [`docs/DEPLOYING.md`](docs/DEPLOYING.md). In short: prove the flow on Base Sepolia, then repeat
 on Base with `ABX_CHAIN=base`, using the ABX creator wallet (`--sponsor`) so no private key is ever
 on disk.
-
-## Changes from the original reference
-
-This is a fresh deployment — new contracts, new seeds — that targets the same behaviour. Differences
-forced by or taken from the latest ABX (CLI `0.2.0`, `abx-contracts 3.0.0`):
-
-- The augment-hook interface is now documented and shipped; `DailyRotation` imports the canonical
-  `IAbxAugmentHook` instead of a hand-copied one (struct `Entry` → `AugmentedParam`, same ABI).
-- `DailySurfaces` imports the canonical `IAbxFieldRenderer`; no vendored interface files.
-- Solidity pinned to `0.8.28` like `abx-contracts`; `abx-contracts` added to the soldeer lock.
-- The program and both audits are otherwise unchanged and pass as-is.
