@@ -1,0 +1,35 @@
+{
+  "chain": "base",
+  "chainId": 8453,
+  "status": "beta network — real funds",
+  "abxCli": "0.2.0",
+  "abxContracts": "3.0.0",
+  "owner": "0x187BAbedCAc5a5466e47681F77C2014780fa7516",
+  "signer": "ABX creator wallet via abx-services (--sponsor)",
+  "collection": {
+    "address": "0x31024340295693CE680350D23Ead13c6c14e84f1",
+    "deployBlock": 52006357,
+    "family": "ERC-721 SeriesCode",
+    "max": 16,
+    "royaltyBps": 500,
+    "royaltyCapBps": 1000,
+    "burnable": false
+  },
+  "contracts": {
+    "DailySurfaces": {
+      "address": "0xe0c9e88270A8e69D24281D7b3a1E1f4c763E1F6A",
+      "tx": "0xda79f9e8f018f6419a0f7fd5ba9afa3247b0832a3801cb0e6145a9160c973e20"
+    },
+    "DailyRotation": {
+      "address": "0x22500DFa9BA65f81e66882974f050Eb4ded57873",
+      "constructor": { "period": 86400 },
+      "tx": "0xffd6b6a09bd182d1f33aafbaa000d38472b14341f1f71375c4c035a0218311e0"
+    }
+  },
+  "wiring": {
+    "augmentHook": "0x22500DFa9BA65f81e66882974f050Eb4ded57873",
+    "setParamHooksTx": "0x2b979a263444f075967cf42babe14f635a28bcacf49844817d3b17a4843208a6"
+  },
+  "resolver": "https://resolver.abx.io/t/8453/0x31024340295693ce680350d23ead13c6c14e84f1/0",
+  "locks": "none — script, URI fields and param hooks are all still owner-mutable"
+}
