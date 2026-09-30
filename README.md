@@ -12,6 +12,7 @@ is not an official or endorsed release of anything.
 |---|---|
 | Network | Base (`8453`) — ABX support level **beta** |
 | Collection | [`0x31024340295693CE680350D23Ead13c6c14e84f1`](https://basescan.org/address/0x31024340295693CE680350D23Ead13c6c14e84f1) (ERC-721, max 16) |
+| OpenSea | [token #0 on OpenSea](https://opensea.io/item/base/0x31024340295693ce680350d23ead13c6c14e84f1/0) |
 | Hosted view | <https://resolver.abx.io/t/8453/0x31024340295693ce680350d23ead13c6c14e84f1/0> |
 | Testnet twin | Base Sepolia, see [`deployments/base-sepolia.json`](deployments/base-sepolia.json) |
 
